@@ -1,14 +1,10 @@
 <template>
-  <AppContainer> </AppContainer>
+  <h1>HALLO HALLO HALLO</h1>
 </template>
 
 <script>
-  import AppContainer from "./AppContainer.vue";
   export default {
     name: "DirectionsPage",
-    components: {
-      AppContainer,
-    },
   };
 </script>
 
