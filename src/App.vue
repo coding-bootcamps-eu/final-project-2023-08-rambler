@@ -1,21 +1,37 @@
 <template>
-  <DirectionsPage />
-  <h1 class="mt-8 text-center text-6xl">Hallo Vue</h1>
+  <div class="mx-auto flex h-screen w-[600px] flex-col items-start border bg-white">
+    <header class="flex w-full items-start justify-center bg-primary-accent-color-green">
+      <img
+        class="h-fit w-[200px] py-3"
+        :src="Logo"
+        alt="App-Logo"
+      />
+    </header>
+    <h1 class="mx-auto text-[28px]">{{ headline }}</h1>
+    <router-view />
+    <footer class="mt-auto flex w-full justify-center bg-footer-color-grey">&copy; Rambler</footer>
+  </div>
 </template>
 
 <script>
-  import DirectionsPage from "./components/DirectionsPage.vue";
+  import logo from "@/assets/logo/Logo-White.svg";
 
   export default {
     name: "App",
-    components: {
-      DirectionsPage,
+    data() {
+      return {
+        Logo: logo,
+        headline: "Hello Hello",
+      };
     },
+
+    components: {},
   };
 </script>
 
 <style>
   body {
     background-color: black;
+    overflow: hidden;
   }
 </style>
