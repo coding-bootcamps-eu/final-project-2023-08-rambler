@@ -7,6 +7,7 @@ import App from "./App.vue";
 
 import HomeView from "@/views/HomeView.vue";
 import DirectionView from "@/views/DirectionView.vue";
+import GameView from "@/views/GameView.vue";
 
 const routes = [
   {
@@ -24,11 +25,11 @@ const routes = [
   //   name: "Story",
   //   component: StoryView,
   // },
-  //   {
-  //     path: "/nuernberg/game",
-  //     name: "Game",
-  //     component: GameView,
-  //   },
+  {
+    path: "/nuernberg/game",
+    name: "Game",
+    component: GameView,
+  },
   //   {
   //     path: "/nuernberg/sight",
   //     name: "Sight",
