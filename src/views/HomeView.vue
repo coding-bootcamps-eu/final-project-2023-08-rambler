@@ -1,9 +1,12 @@
 <template>
-  <h1 class="text-6xl font-bold">Hello HomeView</h1>
+  <home-page />
 </template>
 
 <script>
+  import HomePage from "../components/HomePage.vue";
+
   export default {
     name: "HomeView",
+    components: { HomePage },
   };
 </script>

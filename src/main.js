@@ -10,7 +10,7 @@ import DirectionView from "@/views/DirectionView.vue";
 
 const routes = [
   {
-    path: "/home",
+    path: "/",
     name: "Home",
     component: HomeView,
   },
