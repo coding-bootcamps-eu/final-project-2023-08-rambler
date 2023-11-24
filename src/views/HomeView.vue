@@ -1,12 +1,20 @@
 <template>
-  <home-page />
+  <div
+    class="flex h-full w-full items-center justify-center bg-home-background-image backdrop-blur-sm"
+  >
+    <div>
+      <multi-select />
+    </div>
+  </div>
 </template>
 
 <script>
-  import HomePage from "../components/HomePage.vue";
+  import MultiSelect from "@/components/MultiSelect.vue";
 
   export default {
-    name: "HomeView",
-    components: { HomePage },
+    name: "HomePage",
+    components: {
+      MultiSelect,
+    },
   };
 </script>
