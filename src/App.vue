@@ -7,7 +7,6 @@
         alt="App-Logo"
       />
     </header>
-    <h1 class="mx-auto text-[28px]">{{ headline }}</h1>
     <router-view />
     <footer class="mt-auto flex w-full justify-center bg-footer-color-grey">&copy; Rambler</footer>
   </div>
