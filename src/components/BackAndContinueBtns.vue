@@ -3,7 +3,12 @@
     <button class="w-[200px] rounded-full border-[1px] border-black shadow-lg">
       {{ backBtn }}
     </button>
-    <button class="hidden w-[200px] rounded-full border-[1px] border-black shadow-lg">
+    <button
+      :class="{
+        'w-[200px] rounded-full border-[1px] border-black shadow-lg': true,
+        hidden: !showContinue,
+      }"
+    >
       {{ continueBtn }}
     </button>
   </div>
@@ -11,6 +16,7 @@
 
 <script>
   export default {
+    props: ["showContinue"],
     data() {
       return {
         backBtn: "Zurück",

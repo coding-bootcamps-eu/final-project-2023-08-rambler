@@ -4,9 +4,9 @@
     v-for="answer in gameData"
     :key="answer"
     :class="{
-      'bg-green-500': selectedAnswer === answer.id,
+      'bg-green-500': selectedAnswer?.id === answer.id && answer.isCorrect,
     }"
-    @click="checkIsCorrect(answer.id)"
+    @click="checkIsCorrect(answer)"
   >
     <p class="ml-3 mr-8 pl-[10px] text-3xl font-bold">{{ answer.id }}</p>
     <div class="w-[450px]">
@@ -15,7 +15,7 @@
       </p>
     </div>
   </button>
-  <BackAndContinueBtns />
+  <BackAndContinueBtns :showContinue="selectedAnswer?.isCorrect" />
 </template>
 
 <script>
@@ -25,9 +25,7 @@
   export default {
     data() {
       return {
-        gameData: [],
         selectedAnswer: null,
-        correctAnswer: null,
         currentQuestionIndex: 0,
       };
     },
@@ -35,19 +33,14 @@
       BackAndContinueBtns,
     },
     computed: {
-      // eslint-disable-next-line vue/return-in-computed-property
-      invokeAnswers: function () {
-        const question = questionsData[0];
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.gameData = question.answers;
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.correctAnswer = question.isCorrect;
+      gameData() {
+        return questionsData[0].answers;
       },
     },
     methods: {
       checkIsCorrect: function (selectedAnswer) {
         const correctAnswer = this.gameData.find((answer) => answer.isCorrect);
-        if (selectedAnswer === correctAnswer.id) {
+        if (selectedAnswer.id === correctAnswer.id) {
           this.selectedAnswer = selectedAnswer;
           console.log("Richtig!");
           return;
@@ -55,9 +48,6 @@
           console.log("Falsch!");
         }
       },
-    },
-    created() {
-      this.invokeAnswers;
     },
   };
 </script>
