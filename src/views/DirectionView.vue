@@ -1,9 +1,14 @@
 <template>
-  <h1 class="text-6xl font-bold">Hello DirectionView</h1>
+  <location-map class="mx-auto" />
 </template>
 
 <script>
+  import LocationMap from "@/components/LocationMap.vue";
+
   export default {
     name: "DirectionView",
+    components: {
+      LocationMap,
+    },
   };
 </script>
