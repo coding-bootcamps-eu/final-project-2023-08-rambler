@@ -1,3 +1,6 @@
+import sightImage from "@/assets/fotos/nuernberg1.jpg";
+console.log(typeof sightImage);
+
 const questionData = [
   {
     question:
@@ -20,6 +23,7 @@ const questionData = [
         isCorrect: true,
       },
     ],
+    images: [sightImage],
   },
   {
     question: "Welches der folgenden Antworten is ein JS Framework",
