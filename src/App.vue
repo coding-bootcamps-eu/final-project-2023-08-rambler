@@ -1,5 +1,8 @@
 <template>
-  <div class="mx-auto flex h-screen w-[600px] flex-col items-start border bg-white">
+  <div
+    id="container"
+    class="mx-auto flex h-screen w-[600px] flex-col items-start border bg-white"
+  >
     <header class="flex w-full items-start justify-center bg-primary-accent-color-green">
       <img
         class="h-fit w-[200px] py-3"
@@ -30,7 +33,6 @@
 
 <style>
   body {
-    background-color: black;
-    overflow: hidden;
+    background-color: grey;
   }
 </style>

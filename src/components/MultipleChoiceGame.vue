@@ -17,7 +17,7 @@
       </div>
     </button>
   </div>
-  <div class="mb-[70%]">
+  <div class="">
     <BackAndContinueBtns
       :showContinue="selectedAnswer?.isCorrect"
       continueLink="/nuernberg/sight"
