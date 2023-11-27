@@ -13,7 +13,7 @@ import EndView from "@/views/EndView.vue";
 
 const routes = [
   {
-    path: "/home",
+    path: "/",
     name: "Home",
     component: HomeView,
   },

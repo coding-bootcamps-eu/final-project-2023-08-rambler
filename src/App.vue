@@ -7,7 +7,6 @@
         alt="App-Logo"
       />
     </header>
-
     <router-view />
     <footer class="mt-auto flex w-full justify-center bg-footer-color-grey">&copy; Rambler</footer>
   </div>
