@@ -1,21 +1,30 @@
 <template>
-  <button
-    class="ml-3 mr-3 mt-7 flex h-[60px] w-[450px] items-center rounded-full border-[1px] border-black shadow-lg"
-    v-for="answer in gameData"
-    :key="answer"
-    :class="{
-      'bg-green-500': selectedAnswer?.id === answer.id && answer.isCorrect,
-    }"
-    @click="checkIsCorrect(answer)"
-  >
-    <p class="ml-3 mr-8 pl-[10px] text-3xl font-bold">{{ answer.id }}</p>
-    <div class="w-[450px]">
-      <p class="text-left text-[20px] font-normal">
-        {{ answer.answer }}
-      </p>
-    </div>
-  </button>
-  <BackAndContinueBtns :showContinue="selectedAnswer?.isCorrect" />
+  <div class="ml-[10%] mr-[10%] mt-2 flex flex-col items-center justify-center">
+    <button
+      class="ml-3 mr-3 mt-7 flex h-[60px] w-[450px] items-center rounded-full border-[1px] border-black shadow-lg"
+      v-for="answer in gameData"
+      :key="answer"
+      :class="{
+        'bg-green-500': selectedAnswer?.id === answer.id && answer.isCorrect,
+      }"
+      @click="checkIsCorrect(answer)"
+    >
+      <p class="ml-3 mr-8 pl-[10px] text-3xl font-bold">{{ answer.id }}</p>
+      <div class="w-[450px]">
+        <p class="text-left text-[20px] font-normal">
+          {{ answer.answer }}
+        </p>
+      </div>
+    </button>
+  </div>
+  <div class="mb-[70%]">
+    <BackAndContinueBtns
+      :showContinue="selectedAnswer?.isCorrect"
+      continueLink="/nuernberg/sight"
+      backLink="/nuernberg/ss"
+      tag="button"
+    />
+  </div>
 </template>
 
 <script>

@@ -9,8 +9,8 @@
       :src="MultplyChoiceIcon"
       alt="game-image"
     />
-    <MultipleChoiceGame />
   </div>
+  <MultipleChoiceGame />
 </template>
 
 <script>
