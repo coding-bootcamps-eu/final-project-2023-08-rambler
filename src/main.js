@@ -7,6 +7,9 @@ import App from "./App.vue";
 
 import HomeView from "@/views/HomeView.vue";
 import DirectionView from "@/views/DirectionView.vue";
+import GameView from "@/views/GameView.vue";
+import SightView from "@/views/SightView.vue";
+import EndView from "@/views/EndView.vue";
 
 const routes = [
   {
@@ -24,21 +27,21 @@ const routes = [
   //   name: "Story",
   //   component: StoryView,
   // },
-  //   {
-  //     path: "/nuernberg/game",
-  //     name: "Game",
-  //     component: GameView,
-  //   },
-  //   {
-  //     path: "/nuernberg/sight",
-  //     name: "Sight",
-  //     component: SightView,
-  //   },
-  //   {
-  //     path: "/finish",
-  //     name: "Finish",
-  //     component: FinishView,
-  //   },
+  {
+    path: "/nuernberg/game",
+    name: "Game",
+    component: GameView,
+  },
+  {
+    path: "/nuernberg/sight",
+    name: "Sight",
+    component: SightView,
+  },
+  {
+    path: "/nuernberg/end",
+    name: "End",
+    component: EndView,
+  },
 ];
 
 const router = createRouter({
