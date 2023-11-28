@@ -1,10 +1,10 @@
 <template>
-  <h1 class="m-auto">Congrats ! You finished the game !!!</h1>
+  <h1 class="m-auto">StoryView</h1>
 
   <BackAndContinueBtns
     :showContinue="true"
-    continueLink="/nuremberg/end"
-    backLink="/nuremberg/sight"
+    continueLink="/nuremberg/game"
+    backLink="/nuremberg/direction"
     tag="button"
   />
 </template>

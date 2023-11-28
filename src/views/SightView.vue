@@ -12,8 +12,8 @@
   </section>
   <BackAndContinueBtns
     :showContinue="true"
-    continueLink="/nuernberg/end"
-    backLink="/nuernberg/game"
+    continueLink="/nuremberg/end"
+    backLink="/nuremberg/game"
     tag="button"
   />
 </template>

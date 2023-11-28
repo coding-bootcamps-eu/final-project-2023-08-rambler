@@ -65,7 +65,7 @@
     data() {
       return {
         selectedValue: "",
-        options: ["Nuremberg", "Beispiel"],
+        options: ["Nuremberg"],
       };
     },
     components: {
