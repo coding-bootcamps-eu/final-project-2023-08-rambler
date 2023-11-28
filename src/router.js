@@ -5,6 +5,7 @@ import GameView from "@/views/GameView.vue";
 import SightView from "@/views/SightView.vue";
 import EndView from "@/views/EndView.vue";
 import StoryView from "@/views/StoryView.vue";
+import Story2View from "@/views/Story2View.vue";
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -28,6 +29,11 @@ export const router = createRouter({
       path: "/nuremberg/game",
       name: "Game",
       component: GameView,
+    },
+    {
+      path: "/nuremberg/story2",
+      name: "Story2",
+      component: Story2View,
     },
     {
       path: "/nuremberg/sight",

@@ -2,7 +2,7 @@
   <div class="flex h-screen items-center justify-center">
     <div class="flex flex-col items-center">
       <button @click="getUserLocation">Get your Location</button>
-      <p>Beispielstraße 1</p>
+      <p>{{ sightName }}</p>
       <div
         ref="map"
         class="h-[400px] w-[400px]"
@@ -16,6 +16,7 @@
   import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
   import L from "leaflet";
   import "leaflet-routing-machine";
+  import questionsData from "@/data/data.js";
 
   export default {
     data() {
@@ -25,6 +26,7 @@
         routingControl: null,
         latitude: null,
         longitude: null,
+        sightName: questionsData[0].SightName,
       };
     },
     mounted() {
@@ -69,7 +71,10 @@
       createRouteToAddress(address) {
         console.log("Creating route to address:", address);
 
-        const destination = [47.729942, 7.877371]; // Hard coded Destination Adress (Mambach)
+        const destination = [
+          questionsData[0].coordinatesSight[0],
+          questionsData[0].coordinatesSight[1],
+        ]; // Coordiaten Burg
 
         if (this.userMarker) {
           if (this.routingControl) {

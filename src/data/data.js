@@ -24,26 +24,8 @@ const questionData = [
       },
     ],
     images: [sightImage],
-  },
-  {
-    question: "Welches der folgenden Antworten is ein JS Framework",
-    answers: [
-      {
-        id: "A",
-        answer: "Html",
-        isCorrect: false,
-      },
-      {
-        id: "B",
-        answer: "Vue.js",
-        isCorrect: true,
-      },
-      {
-        id: "C",
-        answer: "Tailwind",
-        isCorrect: false,
-      },
-    ],
+    coordinatesSight: [49.458124952061624, 11.075683783928115],
+    SightName: "Kaiserburg, Burg 17, 90403 Nürnberg",
   },
 ];
 

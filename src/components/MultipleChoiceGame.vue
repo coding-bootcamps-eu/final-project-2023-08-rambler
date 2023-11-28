@@ -20,7 +20,7 @@
   <div class="">
     <BackAndContinueBtns
       :showContinue="selectedAnswer?.isCorrect"
-      continueLink="/nuremberg/sight"
+      continueLink="/nuremberg/story2"
       backLink="/nuremberg/story"
       tag="button"
     />
