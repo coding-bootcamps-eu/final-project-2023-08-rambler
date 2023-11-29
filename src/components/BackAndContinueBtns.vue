@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute bottom-10 flex w-[600px] flex-row justify-center">
+  <div class="mt-5 flex w-full justify-around">
     <router-link
       :to="backLink"
       class="w-[200px] rounded-full border-[1px] border-black shadow-lg"
@@ -11,7 +11,7 @@
     <router-link
       :to="continueLink"
       :class="{
-        'ml-12 w-[200px] rounded-full border-[1px] border-black shadow-lg': true,
+        'w-[200px] rounded-full border-[1px] border-black shadow-lg': true,
         hidden: !showContinue,
       }"
     >

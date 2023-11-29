@@ -1,21 +1,23 @@
 <template>
   <h1 class="m-auto">Congrats ! You finished the game !!!</h1>
-
-  <BackAndContinueBtns
-    :showContinue="true"
-    continueLink="/nuremberg/end"
-    backLink="/nuremberg/sight"
-    tag="button"
-  />
+  <div>
+    <router-link
+      to="/"
+      class="flex justify-center"
+    >
+      <div
+        class="flex h-[50px] w-[200px] items-center justify-center rounded-full border-[1px] border-black shadow-lg"
+      >
+        Home
+      </div>
+    </router-link>
+  </div>
 </template>
 
-<script>
-  import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
-
+<!-- <script>
   export default {
     data() {
       return {};
     },
-    components: { BackAndContinueBtns },
   };
-</script>
+</script> -->
