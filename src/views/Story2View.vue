@@ -1,12 +1,15 @@
 <template>
-  <p>{{ story2 }}</p>
+  <div class="flex flex-col items-center justify-center px-10">
+    <h1 class="my-12 text-3xl font-bold">End of Story</h1>
+    <p class="mb-10 leading-7">{{ story2 }}</p>
 
-  <BackAndContinueBtns
-    :showContinue="true"
-    continueLink="/nuremberg/sight"
-    backLink="/nuremberg/game"
-    tag="button"
-  />
+    <BackAndContinueBtns
+      :showContinue="true"
+      continueLink="/nuremberg/sight"
+      backLink="/nuremberg/game"
+      tag="button"
+    />
+  </div>
 </template>
 
 <script>

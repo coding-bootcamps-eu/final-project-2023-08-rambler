@@ -1,7 +1,7 @@
 <template>
   <div class="ml-[10%] mr-[10%] mt-2 max-w-screen-sm overflow-auto">
     <button
-      class="mt-7 flex h-[60px] items-center overflow-auto rounded-full border-[1px] border-black shadow-lg"
+      class="mt-7 flex h-[60px] w-full items-center rounded-full border-[1px] border-black shadow-lg"
       v-for="answer in gameData"
       :key="answer"
       :class="{

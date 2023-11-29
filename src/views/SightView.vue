@@ -6,11 +6,13 @@
       alt="nuernberg-image"
     />
 
-    <section class="m-8">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem rerum cumque nisi
-      quia harum aliquid incidunt veritatis officiis. Quaerat sapiente nobis earum praesentium?
-      Sequi laborum animi pariatur ut eius.
-      <button @click="slideDivUp">Weiterlesen...</button>
+    <section class="m-8 flex items-center justify-center">
+      <button
+        @click="slideDivUp"
+        class="animate-bounce rounded-lg border-2 border-primary-accent-color-green p-1 px-2 font-semibold"
+      >
+        Info's about Nuremberg-Castle
+      </button>
     </section>
     <BackAndContinueBtns
       :showContinue="true"
@@ -18,30 +20,50 @@
       backLink="/nuremberg/story2"
       tag="button"
     />
-    <div
-      v-show="divVisible"
-      class="absolute flex h-max w-[640px] flex-col items-center bg-white opacity-80 transition-all duration-[0.5s] ease-[ease-out]"
-      :style="{ top: divPosition }"
+    <transition
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100"
+      enter-active-class="transition-all duration-[o.5s] ease-[ease-out] transform"
+      leave-active-class="transition-all duration-[o.5s] ease-[ease-out] transform"
+      leave-from-class="opacity-100"
+      leave-to-class="opactiy-0"
     >
-      <button
-        class="rounded-full border-[1px] border-black"
-        @click="slideDivDown"
+      <div
+        v-show="divVisible"
+        class="absolute flex h-max w-[640px] flex-col items-center bg-white opacity-95"
+        :style="{ top: divPosition }"
       >
-        x
-      </button>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto nesciunt blanditiis cum
-        neque nihil voluptas enim laboriosam excepturi mollitia voluptatum iusto reprehenderit hic
-        alias similique, cumque magnam, tempore maxime dolor? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Totam obcaecati adipisci minus voluptas aperiam id, eligendi ratione dolor
-        qui, officiis error soluta. Tenetur ipsam explicabo autem pariatur, maxime eum laborum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore vero laborum? Nam fugit
-        voluptates at enim asperiores doloremque vel, iste non repellendus, doloribus quasi sit,
-        veniam numquam necessitatibus omnis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Corrupti sequi ex quos omnis unde rerum. Expedita, dolorum tempore molestiae quia
-        blanditiis dicta quis rem, quidem recusandae cupiditate sit quae aliquid?
-      </p>
-    </div>
+        <button
+          class="mt-2 h-fit w-fit rounded-full border-[1px] border-black px-2"
+          @click="slideDivDown"
+        >
+          x
+        </button>
+        <div class="overflow-auto">
+          <p class="mx-7 mb-4 pb-3">
+            The Nuremberg Castle, a landmark with over 1,000 years of history, not only provides a
+            spectacular view of the Old Town but also houses the Germanic National Museum. <br />
+            <br />
+            It has evolved over the centuries into a symbol of the city’s resilience and cultural
+            richness. The castle’s sprawling complex encompasses not only the imposing Kaiserburg
+            but also the delightful Sinwell Tower and the elegant Burggrafenhalle, each contributing
+            to the castle’s unique charm, <br />
+            <br />
+            The Kaiserburg, the central nucleus of the castle, boasts a mix of architectural styles
+            from Romanesque to Renaissance, reflecting the various periods of its construction.
+            Visitors can explore the Imperial Chapel, where emperors once held religious ceremonies,
+            and the Palas, a grand hall that served as the imperial living quarters. The castle’s
+            architecture tells a story of power, prestige, and the ever-changing dynamics of
+            medieval Europe. <br />
+            <br />
+            Wandering through the castle’s courtyards and gardens, visitors are treated to
+            breathtaking views of Nuremberg and the surrounding landscapes. The Tiergarten, the
+            castle’s charming garden, invites moments of quiet contemplation amid its greenery and
+            historical ambiance.
+          </p>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -59,7 +81,7 @@
     methods: {
       slideDivUp() {
         // Ändere die Position des div-Elements
-        this.divPosition = "8%";
+        this.divPosition = "0%";
         this.divVisible = true;
       },
       slideDivDown() {
