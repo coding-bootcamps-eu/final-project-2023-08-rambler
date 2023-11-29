@@ -27,11 +27,16 @@
         latitude: null,
         longitude: null,
         sightName: questionsData[0].SightName,
+        updateInterval: 120000,
       };
     },
     mounted() {
       this.initMap();
       this.getUserLocation();
+
+      setInterval(() => {
+        this.getUserLocation();
+      }, this.updateInterval);
     },
 
     methods: {
