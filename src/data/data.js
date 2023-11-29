@@ -1,28 +1,36 @@
 import sightImage from "@/assets/fotos/nuernberg1.jpg";
 console.log(typeof sightImage);
 
-const questionData = [
+const questionData = {
+  [
   {
+    index: 0,
     question:
-      "Welches kuriose Ereignis soll angeblich während der Belagerung der Nürnberger Burg im Mittelalter passiert sein ?",
+    "What is the Code that will get you access and trust to the Abbot ",
     answers: [
       {
         id: "A",
-        answer: "Ein Ritter verlor seinen Helm und fand ihn in einer Bäckerei.",
+        answer: "3233",
         isCorrect: false,
       },
       {
         id: "B",
-        answer: "Die Belagerer wurden von Eichhörnchen attackiert.",
-        isCorrect: false,
+        answer: "3184",
+        isCorrect: true,
       },
       {
         id: "C",
         answer:
-          "Ein Musiker spielte während des Angriffes eine Ode, und beide Seiten hielten inne.",
+          "2917",
         isCorrect: true,
       },
-    ],
+      {
+        id: "D",
+        answer:
+          "3015",
+        isCorrect: false,
+      },
+    ]},
     images: [sightImage],
     coordinatesSight: [49.458124952061624, 11.075683783928115],
     SightName: "Kaiserburg, Burg 17, 90403 Nürnberg",
@@ -49,6 +57,7 @@ const questionData = [
     `,
     ],
   },
-];
+]
+}
 
 export default questionData;
