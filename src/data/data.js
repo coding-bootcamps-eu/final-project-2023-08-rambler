@@ -1,29 +1,29 @@
 import sightImage from "@/assets/fotos/nuernberg1.jpg";
+import endLogo from "@/assets/fotos/Ende.svg";
 console.log(typeof sightImage);
 
 const questionData = [
   {
     question:
-      "Welches kuriose Ereignis soll angeblich während der Belagerung der Nürnberger Burg im Mittelalter passiert sein ?",
+      "What strange event is said to have happened during the siege of Nuremberg Castle in the Middle Ages?",
     answers: [
       {
         id: "A",
-        answer: "Ein Ritter verlor seinen Helm und fand ihn in einer Bäckerei.",
+        answer: "A knight lost his helmet and found it in a bakery.",
         isCorrect: false,
       },
       {
         id: "B",
-        answer: "Die Belagerer wurden von Eichhörnchen attackiert.",
+        answer: "The besiegers were attacked by squirrels.",
         isCorrect: false,
       },
       {
         id: "C",
-        answer:
-          "Ein Musiker spielte während des Angriffes eine Ode, und beide Seiten hielten inne.",
+        answer: "A musician played an ode during the attack and both sides paused.",
         isCorrect: true,
       },
     ],
-    images: [sightImage],
+    images: [sightImage, endLogo],
     coordinatesSight: [49.458124952061624, 11.075683783928115],
     SightName: "Kaiserburg, Burg 17, 90403 Nürnberg",
     story: [

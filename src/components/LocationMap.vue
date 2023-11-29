@@ -1,11 +1,16 @@
 <template>
   <div class="flex h-screen items-center justify-center">
     <div class="flex flex-col items-center">
-      <button @click="getUserLocation">Get your Location</button>
+      <button
+        class="mb-5 h-fit w-fit rounded-lg border-4 border-primary-accent-color-green bg-white p-2 text-black"
+        @click="getUserLocation"
+      >
+        Get your Location
+      </button>
       <p>{{ sightName }}</p>
       <div
         ref="map"
-        class="h-[400px] w-[400px]"
+        class="h-[400px] w-[400px] border-2 border-primary-accent-color-green"
       ></div>
     </div>
   </div>

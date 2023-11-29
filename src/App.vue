@@ -34,5 +34,6 @@
 <style>
   body {
     background-color: grey;
+    font-family: "DM Sans", "sans-serif";
   }
 </style>
