@@ -3,7 +3,7 @@
   <BackAndContinueBtns
     :showContinue="true"
     continueLink="/nuremberg/story"
-    backLink="/"
+    backLink="/nuremberg/storyIntro"
     tag="button"
   />
 </template>

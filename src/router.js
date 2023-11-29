@@ -4,6 +4,7 @@ import DirectionView from "@/views/DirectionView.vue";
 import GameView from "@/views/GameView.vue";
 import SightView from "@/views/SightView.vue";
 import EndView from "@/views/EndView.vue";
+import StoryIntroView from "@/views/StoryIntroView.vue";
 import StoryView from "@/views/StoryView.vue";
 import Story2View from "@/views/Story2View.vue";
 
@@ -14,6 +15,11 @@ export const router = createRouter({
       path: "/",
       name: "Home",
       component: HomeView,
+    },
+    {
+      path: "/nuremberg/storyintro",
+      name: "StoryIntro",
+      component: StoryIntroView,
     },
     {
       path: "/nuremberg/direction",

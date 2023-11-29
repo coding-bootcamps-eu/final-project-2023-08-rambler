@@ -1,5 +1,5 @@
 <template>
-  <h1 class="m-auto">Story2View</h1>
+  <p>{{ story2 }}</p>
 
   <BackAndContinueBtns
     :showContinue="true"
@@ -11,10 +11,13 @@
 
 <script>
   import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
+  import questionsData from "@/data/data.js";
 
   export default {
     data() {
-      return {};
+      return {
+        story2: questionsData[0].story[2],
+      };
     },
     components: { BackAndContinueBtns },
   };

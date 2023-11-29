@@ -73,11 +73,5 @@
       AppLogo,
       StartButton,
     },
-    methods: {
-      handleCitySelected() {
-        // Handle logic when a city is selected
-        // You can emit an event or perform other actions here
-      },
-    },
   };
 </script>

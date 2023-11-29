@@ -1,22 +1,21 @@
 <template>
-  <p>{{ story }}</p>
-
+  <p>{{ storyIntro }}</p>
   <BackAndContinueBtns
     :showContinue="true"
-    continueLink="/nuremberg/game"
-    backLink="/nuremberg/direction"
+    continueLink="/nuremberg/direction"
+    backLink="/"
     tag="button"
   />
 </template>
 
 <script>
-  import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
   import questionsData from "@/data/data.js";
+  import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
 
   export default {
     data() {
       return {
-        story: questionsData[0].story[1],
+        storyIntro: questionsData[0].story[0],
       };
     },
     components: { BackAndContinueBtns },
