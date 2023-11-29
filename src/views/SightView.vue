@@ -1,12 +1,12 @@
 <template>
-  <div class="">
+  <div>
     <img
-      class="h-fit w-full py-3"
       :src="image"
+      width="638"
       alt="nuernberg-image"
     />
 
-    <section>
+    <section class="m-8">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, autem rerum cumque nisi
       quia harum aliquid incidunt veritatis officiis. Quaerat sapiente nobis earum praesentium?
       Sequi laborum animi pariatur ut eius.
@@ -48,7 +48,6 @@
 <script>
   import questionsData from "@/data/data.js";
   import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
-
   export default {
     data() {
       return {
