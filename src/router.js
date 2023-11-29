@@ -17,32 +17,32 @@ export const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/nuremberg/storyintro",
+      path: "/nuremberg/storyintro/:index",
       name: "StoryIntro",
       component: StoryIntroView,
     },
     {
-      path: "/nuremberg/direction",
+      path: "/nuremberg/direction/:index",
       name: "Direction",
       component: DirectionView,
     },
     {
-      path: "/nuremberg/story",
+      path: "/nuremberg/story/:index",
       name: "Story",
       component: StoryView,
     },
     {
-      path: "/nuremberg/game",
+      path: "/nuremberg/game/:index",
       name: "Game",
       component: GameView,
     },
     {
-      path: "/nuremberg/story2",
+      path: "/nuremberg/story2/:index",
       name: "Story2",
       component: Story2View,
     },
     {
-      path: "/nuremberg/sight",
+      path: "/nuremberg/sight/:index",
       name: "Sight",
       component: SightView,
     },

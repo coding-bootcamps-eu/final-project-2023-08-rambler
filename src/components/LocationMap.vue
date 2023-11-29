@@ -16,7 +16,7 @@
   import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
   import L from "leaflet";
   import "leaflet-routing-machine";
-  import questionsData from "@/data/data.js";
+  import sights from "@/data/data.js";
 
   export default {
     data() {
@@ -26,7 +26,7 @@
         routingControl: null,
         latitude: null,
         longitude: null,
-        sightName: questionsData[0].SightName,
+        sightName: sights[Number(this.$route.params.index)].SightName,
         updateInterval: 120000,
       };
     },
@@ -77,8 +77,8 @@
         console.log("Creating route to address:", address);
 
         const destination = [
-          questionsData[0].coordinatesSight[0],
-          questionsData[0].coordinatesSight[1],
+          sights[Number(this.$route.params.index)].coordinatesSight[0],
+          sights[Number(this.$route.params.index)].coordinatesSight[1],
         ]; // Coordiaten Burg
 
         if (this.userMarker) {

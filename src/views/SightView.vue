@@ -14,7 +14,7 @@
     </section>
     <BackAndContinueBtns
       :showContinue="true"
-      continueLink="/nuremberg/end"
+      :continueLink="isLastSight ? '/nuremberg/end' : '/nuremberg/direction/' + (sightIndex + 1)"
       backLink="/nuremberg/story2"
       tag="button"
     />
@@ -46,12 +46,12 @@
 </template>
 
 <script>
-  import questionsData from "@/data/data.js";
+  import sights from "@/data/data.js";
   import BackAndContinueBtns from "../components/BackAndContinueBtns.vue";
   export default {
     data() {
       return {
-        image: questionsData[0].images[0],
+        image: sights[0].images[0],
         divPosition: "100%",
         divVisible: false,
       };
@@ -66,6 +66,14 @@
         // Ändere die Position des div-Elements
         this.divPosition = "100%";
         this.divVisible = false;
+      },
+    },
+    computed: {
+      sightIndex() {
+        return Number(this.$route.params.index);
+      },
+      isLastSight() {
+        return this.sightIndex === sights.length - 1;
       },
     },
     components: { BackAndContinueBtns },

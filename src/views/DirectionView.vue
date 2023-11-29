@@ -2,8 +2,8 @@
   <location-map class="mx-auto" />
   <BackAndContinueBtns
     :showContinue="true"
-    continueLink="/nuremberg/story"
-    backLink="/nuremberg/storyIntro"
+    :continueLink="'/nuremberg/story/' + $route.params.index"
+    :backLink="'/nuremberg/storyIntro/' + $route.params.index"
     tag="button"
   />
 </template>
