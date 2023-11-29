@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-full w-full items-center justify-center bg-home-background-image">
+  <div class="bg-home-background-image flex h-full w-full items-center justify-center bg-cover">
     <div class="flex flex-col items-center">
       <multi-select />
     </div>
