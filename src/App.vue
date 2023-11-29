@@ -1,7 +1,7 @@
 <template>
   <div
     id="container"
-    class="mx-auto flex h-screen w-[600px] flex-col items-start border bg-white"
+    class="mx-auto flex h-screen max-w-screen-sm flex-col justify-between border bg-white"
   >
     <header class="flex w-full items-start justify-center bg-primary-accent-color-green">
       <img
