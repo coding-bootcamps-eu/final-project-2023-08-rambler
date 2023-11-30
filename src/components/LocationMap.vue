@@ -2,7 +2,7 @@
   <div class="flex h-screen items-center justify-center">
     <div class="flex flex-col items-center">
       <button
-        class="mb-5 h-fit w-fit rounded-lg border-4 border-primary-accent-color-green bg-white p-2 text-black"
+        class="hover:shadow-continue mb-5 h-fit w-fit rounded-lg border-4 border-primary-accent-color-green bg-white p-2 text-black"
         @click="getUserLocation"
       >
         Get your Location

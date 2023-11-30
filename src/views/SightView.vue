@@ -9,7 +9,7 @@
     <section class="m-8 flex items-center justify-center">
       <button
         @click="slideDivUp"
-        class="animate-bounce rounded-lg border-2 border-primary-accent-color-green p-1 px-2 font-semibold"
+        class="hover:shadow-continue animate-bounce rounded-lg border-2 border-primary-accent-color-green p-1 px-2 font-semibold"
       >
         Info's about Nuremberg-Castle
       </button>
@@ -89,6 +89,9 @@
         this.divPosition = "100%";
         this.divVisible = false;
       },
+    },
+    mounted() {
+      new Image().src = this.image;
     },
     components: { BackAndContinueBtns },
   };

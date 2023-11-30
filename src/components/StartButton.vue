@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-22 flex h-9 animate-pulse items-center justify-center rounded-lg border-2 border-black bg-white px-5 text-black"
+    class="w-22 border-button-color text-button-color flex h-9 items-center justify-center rounded-lg bg-black px-5 font-bold hover:shadow-black"
   >
-    <router-link to="/nuremberg/storyintro"> Los geht's !</router-link>
+    <router-link to="/nuremberg/storyintro"> Let's go !</router-link>
   </div>
 </template>
 

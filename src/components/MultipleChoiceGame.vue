@@ -5,8 +5,8 @@
       v-for="answer in gameData"
       :key="answer"
       :class="{
-        'bg-green-500': selectedAnswer?.id === answer.id && answer.isCorrect,
-        'bg-red-500': wrongAnswer && wrongAnswer.id === answer.id,
+        'bg-multiple-choice-green': selectedAnswer?.id === answer.id && answer.isCorrect,
+        'bg-multiple-choice-red': wrongAnswer && wrongAnswer.id === answer.id,
       }"
       @click="checkIsCorrect(answer)"
     >
