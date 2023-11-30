@@ -50,10 +50,7 @@
   </div>
   <!-- Show StartButton only when a city is selected -->
 
-  <start-button
-    v-if="selectedValue"
-    class="mt-4 bg-white"
-  />
+  <start-button v-if="selectedValue" />
 </template>
 
 <script>

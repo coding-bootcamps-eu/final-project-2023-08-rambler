@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-5 flex w-full justify-around">
+  <div class="mb-5 mt-5 flex w-full justify-around">
     <router-link
       :to="backLink"
-      class="w-[200px] rounded-full border-[1px] border-black shadow-lg"
+      class="border-button-color hover:shadow-back text-button-color w-[200px] rounded-full border-[1px] text-[18px] font-bold shadow-lg hover:font-black hover:tracking-wider"
     >
       <div class="flex h-[50px] items-center justify-center">
         {{ backBtn }}
@@ -11,7 +11,7 @@
     <router-link
       :to="continueLink"
       :class="{
-        'w-[200px] rounded-full border-[1px] border-black shadow-lg': true,
+        'hover:shadow-continue w-[200px] rounded-full bg-primary-accent-color-green text-[18px] font-bold text-white shadow-lg hover:tracking-wider': true,
         hidden: !showContinue,
       }"
     >
@@ -27,8 +27,8 @@
     props: ["showContinue", "backLink", "continueLink"],
     data() {
       return {
-        backBtn: "Zurück",
-        continueBtn: "Weiter",
+        backBtn: "<- Back",
+        continueBtn: "Continue ->",
       };
     },
   };
